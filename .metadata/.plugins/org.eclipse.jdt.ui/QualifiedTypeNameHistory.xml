@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="org.springframework.lang.NonNull"/>
+<fullyQualifiedTypeName name="com.niit.SkillMap.Model.EmployeeSkills"/>
+<fullyQualifiedTypeName name="com.niit.SkillMap.DAO.EmployeeSkillsDao"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.niit.SkillMap.Service.EmployeeSkillsService"/>
+</qualifiedTypeNameHistroy>

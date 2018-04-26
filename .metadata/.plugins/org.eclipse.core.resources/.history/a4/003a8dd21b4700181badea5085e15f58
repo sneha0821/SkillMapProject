@@ -1,0 +1,16 @@
+package com.niit.SkillMap.DAO;
+
+import java.util.List;
+
+import com.niit.SkillMap.Model.Employee;
+
+public interface EmployeeSkillsDao {
+	public List<Employee> findAllEmployeeSkills();
+	//public Employee findEmployeeById(int empId);
+	//public Employee findEmployeeByName(String name);
+	public boolean addEmployeeSkills(Employee employeeSkills);
+	public boolean updateEmployeeSkills(Employee employeeSkills);
+	public boolean deleteEmployeeSkills(int empId);
+	public boolean approveEmployeeSkills(Employee employeeSkills);
+	public List<Employee> approvedEmployeeSkills(Employee employee);
+}

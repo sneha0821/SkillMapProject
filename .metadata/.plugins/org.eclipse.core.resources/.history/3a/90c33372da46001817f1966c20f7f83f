@@ -1,0 +1,37 @@
+package com.niit.SkillMap.Model;
+
+import javax.persistence.Id;
+
+import org.springframework.lang.NonNull;
+
+public class UserCredentials 
+{
+	@Id
+	private int employeeId;
+	@NonNull
+	private String employeeName;
+	@NonNull
+	private String employeeType;
+	@NonNull
+	private String password;
+	
+	public int getEmployeeId() {
+		return employeeId;
+	}
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+	public String getEmployeeName() {
+		return employeeName;
+	}
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+	public String getEmployeeType() {
+		return employeeType;
+	}
+	public void setEmployeeType(String employeeType) {
+		this.employeeType = employeeType;
+	}
+
+}

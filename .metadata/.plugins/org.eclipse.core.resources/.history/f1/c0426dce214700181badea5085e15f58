@@ -1,0 +1,40 @@
+package com.niit.SkillMap.Service;
+
+import java.util.List;
+
+import com.niit.SkillMap.Model.Employee;
+import com.niit.SkillMap.Model.EmployeeSkills;
+
+public class EmployeeSkillsServiceImpl implements EmployeeSkillsService{
+
+	@Override
+	public List<Employee> findAllEmployeeSkills() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean addEmployeeSkills(EmployeeSkills employeeSkills) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean updateEmployeeSkills(EmployeeSkills employeeSkills) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean skillsToApprove(EmployeeSkills employeeSkills) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public List<Employee> approvedSkills(EmployeeSkills employeeSkills) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

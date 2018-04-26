@@ -1,0 +1,130 @@
+package com.niit.SkillMap.Service;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.niit.SkillMap.DAO.EmployeeDao;
+import com.niit.SkillMap.Model.Employee;
+
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService{
+
+	@Autowired
+	private EmployeeDao employeeDAO;
+	
+	public List<Employee> findAllEmployees() {
+		
+		return employeeDAO.findAllEmployee();
+	}
+
+	public Employee findEmployeesById(int empId) {
+		
+		return employeeDAO.findEmployeeById(empId);
+	}
+
+	public boolean addEmployee(Employee employee) {
+		
+		if(employeeDAO.findEmployeeById(employee.getEmployeeId())!=null) {
+			return false;
+		}
+		else {
+			employeeDAO.addEmployee(employee);
+			return true;
+		}
+	}
+
+	public boolean updateEmployee(Employee employee) {
+		if(employeeDAO.findEmployeeById(employee.getEmployeeId())!=null) {	
+			employeeDAO.updateEmployee(employee);
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	public boolean deleteEmployee(int empId) {
+		if(employeeDAO.findEmployeeById(empId)!=null) {	
+			employeeDAO.deleteEmployee(empId);
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	public Employee findEmployeesByName(String name) {
+		
+		return employeeDAO.findEmployeeByName(name);
+	}
+
+}
+/*import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+
+import com.niit.SkillMap.DAO.EmployeeDao;
+import com.niit.SkillMap.Model.Employee;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Autowired
+	EmployeeDao employeeDao;
+
+	
+	public List<Employee> findAllEmployees() {
+		return employeeDao.findAllEmployee();
+	}
+
+	public Employee findEmployeesById(int empId) {
+		return employeeDao.findEmployeeById(empId);
+	}
+
+	public boolean addEmployee(Employee employee) 
+	{
+		System.out.println("Service"+employee.getEmpId());
+		if(employeeDao.findEmployeeById(employee.getEmpId())!=null)
+		{
+		return false;
+		}else
+		{
+			employeeDao.addEmployee(employee);
+			return true;
+		}
+	}
+
+	public boolean updateEmployee(Employee employee) {
+		if(employeeDao.findEmployeeById(employee.getEmpId())!=null)
+		{
+			employeeDao.updateEmployee(employee);
+		return true;
+		}else
+		{
+			return false;
+		}
+	}
+
+	public boolean deleteEmployee(int empId) {
+		if(employeeDao.findEmployeeById(empId)!=null)
+		{
+			employeeDao.deleteEmployee(empId);
+		return true;
+		}else
+		{
+			return false;
+		}
+	}
+	public Employee findEmployeesByName(String empName)
+	{
+		return employeeDao.findEmployeeByName(empName);		
+	}
+
+}
+*/

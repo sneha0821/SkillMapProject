@@ -1,0 +1,17 @@
+package com.niit.SkillMap.DAO;
+
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.niit.SkillMap.Model.Employee;
+import com.niit.SkillMap.Model.EmployeeSkills;
+
+public class EmployeeSkillsDaoImpl implements EmployeeSkillsDao {
+
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+
+}

@@ -1,0 +1,19 @@
+package com.niit.SkillMap.DAO;
+
+import com.niit.SkillMap.Model.UserCredentials;
+
+public class UserCredentialsDaoImpl implements UserCredentialsDao {
+
+	@Override
+	public boolean addUserCredntials(UserCredentials userCredentials) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean updateUserCredntials(UserCredentials userCredentials) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

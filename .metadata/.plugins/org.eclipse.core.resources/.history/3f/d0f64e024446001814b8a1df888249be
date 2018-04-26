@@ -1,0 +1,33 @@
+package com.niit.SkillMap.Model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
+import org.springframework.lang.NonNull;
+
+@Entity
+@Table(name="employee")
+public class Employee {
+	
+	@Id
+	private int employeeId;
+	@NonNull
+	private String employeeName;
+	private String employeeMobileNo;
+	private String employeeEmailId;
+	private String employeeGender;
+	private int centreCode;
+	private String dateOfJoining;
+	private String qualification;
+	private String dateOfBirth;
+	private String empDesign;
+	
+	
+	
+
+}

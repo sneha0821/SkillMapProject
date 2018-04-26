@@ -1,0 +1,49 @@
+package com.niit.SkillMap.DAO;
+
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.niit.SkillMap.Model.Employee;
+
+public class EmployeeSkillsDaoImpl implements EmployeeSkillsDao {
+
+	@Autowired
+	private SessionFactory sessionFactory;
+	@Override
+	public List<Employee> findAllEmployeeSkills() {
+		return sessionFactory.getCurrentSession().createQuery("from EmployeeSkills").list();
+	}
+
+	@Override
+	public boolean addEmployeeSkills(Employee employeeSkills) {
+		sessionFactory.getCurrentSession().save(employeeSkills);
+		return true;
+	}
+
+	@Override
+	public boolean updateEmployeeSkills(Employee employeeSkills) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteEmployeeSkills(int empId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean approveEmployeeSkills(Employee employeeSkills) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public List<Employee> approvedEmployeeSkills(Employee employee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

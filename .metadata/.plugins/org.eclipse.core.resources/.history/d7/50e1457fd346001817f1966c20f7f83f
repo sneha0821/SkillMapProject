@@ -1,0 +1,16 @@
+package com.niit.SkillMap.Model;
+
+import javax.persistence.Id;
+
+import org.springframework.lang.NonNull;
+
+public class UserCredentials 
+{
+	@Id
+	int employeeId;
+	@NonNull
+	String employeeName;
+	@NonNull
+	String employeeType;
+
+}

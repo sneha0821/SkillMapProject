@@ -1,0 +1,93 @@
+package com.niit.SkillMap;
+
+import static org.junit.Assert.*;
+
+import java.util.Date;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import com.niit.SkillMap.Config.ApplicationContext;
+import com.niit.SkillMap.Model.EmployeeSkills;
+
+import com.niit.SkillMap.Service.EmployeeSkillsService;
+@RunWith(SpringRunner.class)
+@SpringJUnitConfig(classes=ApplicationContext.class)
+public class EmployeeSkillsTest {
+
+	@Autowired
+	private EmployeeSkillsService employeeSkillsService;
+	EmployeeSkills emp;
+	
+	
+	@Test
+	public void testAddEmployeeSkills() {
+		
+		 emp=new EmployeeSkills();
+		
+		emp.setNoOfStudents(100);
+		emp.setEmployeeId(31898);
+		emp.setTechnicalSkills("Java");
+		emp.setYearsOfExperience(10);
+		emp.setDesignation("Tech-Mentor");
+		emp.setRating("Excellent");
+		emp.setEmpSkillStatus("null");
+		
+
+		assertEquals(true, employeeSkillsService.addEmployeeSkills(emp));
+				
+	}
+	
+
+	@Test
+	public void testUpdateEmployee() {
+		
+		emp1.setEmpEmail("Sam12@gmail.com");
+		emp1.setEmpType("Trainer");
+		assertEquals(true, employeeSkillsService.updateEmployee(emp1));
+				
+	}
+	@Test//"Trying to update primary key value EmpId"
+	public void testUpdateEmployeeIdFailure() {
+		
+//	Employee emp=new Employee();
+		emp1.setEmpId(111);
+		assertEquals(false, employeeSkillsService.updateEmployee(emp1));
+				
+	}
+	@Test//"Trying to update Employee which is not in db"
+	public void testUpdateEmployeeFailure() {
+		
+		Employee emp=new Employee();
+		emp.setEmpEmail("xxx@gmail.com");
+		assertEquals(false, employeeSkillsService.updateEmployee(emp));
+				
+	}
+	@Test
+	public void testDeleteEmployee() {
+		
+		
+		Employee emp=new Employee();
+		emp.setEmpEmail("xxx@gmail.com");
+		emp.setEmpId(103);
+
+		emp.setEmpName("xxX");
+		
+		employeeSkillsService.addEmployee(emp);
+		assertEquals(true, employeeSkillsService.deleteEmployee(emp.getEmpId()));
+				
+	}
+	@Test
+	public void testDeleteEmployeeFailure() {
+		
+		Employee emp=new Employee();
+		
+		assertEquals(false, employeeSkillsService.deleteEmployee(emp.getEmpId()));
+				
+	}*/
+}

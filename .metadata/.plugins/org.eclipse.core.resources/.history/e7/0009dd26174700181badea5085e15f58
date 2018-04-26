@@ -1,0 +1,49 @@
+package com.niit.SkillMap.Model;
+
+public class EmployeeSkills
+{
+	private	int employeeId;
+	private String technicalSkills;
+	private int yearsOfExperience;
+	private String designation;
+	private int noOfStudents;
+	private String rating;
+	public int getEmployeeId() {
+		return employeeId;
+	}
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+	public String getTechnicalSkills() {
+		return technicalSkills;
+	}
+	public void setTechnicalSkills(String technicalSkills) {
+		this.technicalSkills = technicalSkills;
+	}
+	public int getYearsOfExperience() {
+		return yearsOfExperience;
+	}
+	public void setYearsOfExperience(int yearsOfExperience) {
+		this.yearsOfExperience = yearsOfExperience;
+	}
+	public String getDesignation() {
+		return designation;
+	}
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
+	public int getNoOfStudents() {
+		return noOfStudents;
+	}
+	public void setNoOfStudents(int noOfStudents) {
+		this.noOfStudents = noOfStudents;
+	}
+	public String getRating() {
+		return rating;
+	}
+	public void setRating(String rating) {
+		this.rating = rating;
+	}
+	
+
+}

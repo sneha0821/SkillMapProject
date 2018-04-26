@@ -1,0 +1,23 @@
+package com.niit.SkillMap.DAO;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.niit.SkillMap.Model.UserCredentials;
+
+public class UserCredentialsDaoImpl implements UserCredentialsDao {
+
+	@Autowired
+	SessionFactory sessionFactory;
+	@Override
+	public boolean addUserCredntials(UserCredentials userCredentials) {
+		return (boolean) sessionFactory.getCurrentSession().save(userCredentials);
+	}
+
+	@Override
+	public boolean updateUserCredntials(UserCredentials userCredentials) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

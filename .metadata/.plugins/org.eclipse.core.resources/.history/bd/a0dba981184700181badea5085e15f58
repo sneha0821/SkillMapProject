@@ -1,0 +1,5 @@
+package com.niit.SkillMap.DAO;
+
+public interface EmployeeSkillsDao {
+
+}

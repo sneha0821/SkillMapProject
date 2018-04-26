@@ -1,0 +1,81 @@
+package com.niit.SkillMap.Model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
+import org.springframework.lang.NonNull;
+
+@Entity
+@Table(name="employee")
+public class Employee {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int empId;
+	
+	@NonNull
+	private String name;
+	
+	@NonNull
+	//@Column(name="design",unique=true)
+	private String design;
+	
+	public int getEmpId() {
+		return empId;
+	}
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getDesig()
+	{		return design;
+	}
+	public void setEmail(String design) {
+		this.design = design;
+	}
+	
+	
+
+}
+/*@Entity
+@Table(name="employee")
+public class Employee {
+
+	@Id
+	//@GeneratedValue(strategy=GenerationType.IDENTITY)
+	int empId;
+
+	@NonNull
+	String empName;
+	@NonNull
+	String empDesig;
+	public int getEmpId() {
+		return empId;
+	}
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+	public String getEmpName() {
+		return empName;
+	}
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+	public String getEmpDesig() {
+		return empDesig;
+	}
+	public void setEmpDesig(String empDesig) {
+		this.empDesig = empDesig;
+	}
+
+}*/

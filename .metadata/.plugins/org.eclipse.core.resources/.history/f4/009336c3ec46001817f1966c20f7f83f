@@ -1,0 +1,9 @@
+package com.niit.SkillMap.DAO;
+
+import com.niit.SkillMap.Model.UserCredentials;
+
+public interface UserCredentialsDao {
+
+	public boolean addUserCredntials(UserCredentials userCredentials);
+	public boolean updateUserCredntials(UserCredentials userCredentials);
+}

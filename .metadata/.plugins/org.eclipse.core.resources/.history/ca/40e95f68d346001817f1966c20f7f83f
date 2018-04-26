@@ -1,0 +1,5 @@
+package com.niit.SkillMap.Model;
+
+public class UserCredentials {
+
+}
